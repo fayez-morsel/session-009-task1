@@ -633,7 +633,7 @@ header {
 /* portfolio  */
 
 #portfolio {
-  height: 100vh;
+  height: 100%;
 }
 
 .portfolio-head {
@@ -668,13 +668,13 @@ header {
   cursor: pointer;
 }
 
-.navbar-portfolio{
+.navbar-portfolio {
   display: flex;
   gap: 40px;
   justify-content: center;
 }
 
-.portfolio-imgs{
+.portfolio-imgs {
   margin: 2rem 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -682,11 +682,100 @@ header {
   column-gap: 3px;
 }
 
-.portfolio-imgs .img{
-  width: 100%; 
-  
+.portfolio-imgs .img {
+  width: 100%;
 }
 
-.portfolio-imgs .img img{
+.portfolio-imgs .img img {
   max-width: 100%;
+}
+
+/* subscribe  */
+
+#subscribe {
+  margin-top: -35px;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--dark);
+  color: var(--light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.subscribe-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subscribe-head h1 {
+  font-size: 55px;
+  font-weight: 700;
+  list-style: 1.5;
+  width: 70%;
+  text-align: center;
+}
+
+.subscribe-head p {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: var(--font-family-Manrope);
+  color: var(--first-bg-color);
+}
+
+.subscribe-body{
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.subscribe-body .input-email {
+  padding: 25px;
+  border-color: #e5e5e5;
+  font-weight: 400;
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 23px;
+  font-family: var(--font-family-roboto);
+  width: 100%;
+  background-color: var(--light);
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0px;
+  height: 52px;
+}
+
+.subscribe-body p{
+  font-size: 16px;
+  font-weight: 400;
+  font-family: var(--font-family-Manrope);
+  color: var(--first-bg-color);
+}
+
+.subscribe-body button {
+  width: auto;
+  font-weight: 700;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+  display: inline-block;
+  line-height: inherit;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  border-radius: 0;
+  border: 2px solid var(--light);
+  font-family: var(--font-family-roboto);
+  font-size: 14px;
+  padding: 12px 35px 12px 37px;
+  background-color: rgba(255, 255, 255, 0);
+  color: var(--light);
+}
+
+.subscribe-body button:hover {
+  background-color: var(--light);
+  color: var(--dark);
 }
