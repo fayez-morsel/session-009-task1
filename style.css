@@ -19,6 +19,7 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-width: none;
 }
 
 body {
@@ -60,6 +61,7 @@ header {
   top: 0;
   left: 0;
   z-index: 1000;
+  background-color: white;
 }
 
 .header-links {
@@ -285,13 +287,24 @@ header {
 .services-row {
   overflow-x: scroll;
   overflow-y: hidden;
-  width: 1140px;
-  min-height: 224px;
+  width: 80%;
+  padding: 0 3rem;
 }
 
+.custom-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+  overflow: auto;
+}
+
+.custom-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+
 .services-row .items {
-  width: 300vw;
-  height: 204px;
+  width: 400vh;
+  overflow: hidden;
   display: flex;
   gap: 50px;
   padding: 20px;
@@ -300,7 +313,8 @@ header {
 
 .services-row .item {
   width: 247.5px;
-  height: 177px;
+  height: 227px;
+  max-height: 247px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -313,6 +327,7 @@ header {
   font-weight: 550;
   font-family: var(--font-family-Manrope);
   margin-top: 20px;
+  text-align: center;
 }
 
 .services-row .item > p {
@@ -324,6 +339,22 @@ header {
   text-align: center;
 }
 
+@media (max-width: 780px) {
+  .services-row {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 70%;
+    padding: 0;
+  }
+}
+
+@media (max-width: 725px) {
+  .services-row {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 260px;
+  }
+}
 /* features */
 
 #features {
