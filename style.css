@@ -1231,6 +1231,10 @@ header {
   color: var(--text-color);
 }
 
+#hihi {
+  width: 240px;
+}
+
 .contact-body {
   display: grid;
   grid-template-columns: 45% 55%;
@@ -1379,12 +1383,37 @@ header {
   color: var(--dark);
 }
 
+@media (max-width: 760px) {
+  .contact-body {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0 4rem 8rem;
+  }
+
+  .contact-body .form form {
+    display: grid;
+    grid-template-areas:
+      " i1 "
+      " i2 "
+      " i3 "
+      " i4 "
+      " i5 "
+      " i6 ";
+    gap: 30px;
+    padding: 2rem 0;
+  }
+
+  .form form input , .form form textarea {
+    width: 370px;
+  }
+}
+
 /* footer  */
 
 footer {
   background-color: var(--dark);
   padding: 10rem 8rem;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   color: var(--light);
   display: grid;
