@@ -605,7 +605,6 @@ header {
   font-weight: 550;
   font-size: 55px;
   margin: 0;
-  
 }
 
 .pricing-items .item p {
@@ -640,8 +639,7 @@ header {
 }
 
 @media (max-width: 990px) {
-  
-  .pricing-header{
+  .pricing-header {
     text-align: center;
   }
 
@@ -651,8 +649,6 @@ header {
     grid-template-columns: 1fr;
     gap: 30px;
   }
-
-
 }
 
 /* video  */
@@ -672,14 +668,15 @@ header {
 }
 
 #video .container h1 {
-  width: 60%;
+  width: 522px;
   color: var(--light);
   text-align: center;
   margin: 30px 0;
+  font-size: 55px;
 }
 
 #video .container p {
-  width: 60%;
+  width: 522px;
   color: #e4e4e4;
   text-align: center;
 }
@@ -715,18 +712,19 @@ header {
 }
 
 .desc-info h1 {
-  font-size: 70px;
+  font-size: clamp(20px, 5vw, 55px);
   font-weight: 700;
+  max-width: 400px;
 }
 
 .desc-info p {
   font-weight: 400;
   margin-top: 25px;
   color: var(--link-color);
-  font-size: 16px;
+  font-size: clamp(6px, 3vw, 17px);
   line-height: 23px;
   font-family: var(--font-family-Manrope);
-  width: 76%;
+  width: 420px;
 }
 
 .desc-info button {
@@ -751,6 +749,64 @@ header {
 .desc-info button:hover {
   background-color: rgba(255, 255, 255, 0);
   color: var(--dark);
+}
+
+@media (max-width: 1215px) {
+  #desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .desc-img {
+    width: 100%;
+  }
+
+  #desc2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #haha {
+    width: 100%;
+  }
+
+  .desc-info {
+    width: 100%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .desc-info h1,
+  .desc-info p {
+    text-align: center;
+    width: 100%;
+  }
+
+  .desc-info h1 {
+    font-size: clamp(20px, 8vw, 75px);
+  }
+
+  #desc22 {
+    width: 100%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #desc22 h1,
+  #desc22 p {
+    text-align: center;
+    width: 100%;
+  }
+
+  #desc22 h1 {
+    font-size: clamp(20px, 8vw, 75px);
+  }
 }
 
 /* desc2  */
@@ -780,15 +836,16 @@ header {
 }
 
 .desc2-info h1 {
-  font-size: 70px;
+  font-size: clamp(20px, 5vw, 55px);
   font-weight: 700;
+  max-width: 400px;
 }
 
 .desc2-info p {
   font-weight: 400;
   margin-top: 25px;
   color: var(--link-color);
-  font-size: 16px;
+  font-size: clamp(6px, 3vw, 17px);
   line-height: 23px;
   font-family: var(--font-family-Manrope);
   width: 76%;
