@@ -654,9 +654,10 @@ header {
 /* video  */
 
 #video {
-  height: 100vh;
+  height: 100%;
   background-color: var(--dark);
   color: var(--light);
+  padding: 8rem 0;
 }
 
 #video .container {
@@ -760,6 +761,8 @@ header {
 
   .desc-img {
     width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   #desc2 {
@@ -770,6 +773,8 @@ header {
 
   #haha {
     width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   .desc-info {
@@ -935,11 +940,35 @@ header {
   max-width: 100%;
 }
 
+@media (max-width: 1200px) {
+  .portfolio-imgs {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 960px) {
+  .portfolio-head {
+    text-align: center;
+  }
+
+  .portfolio-imgs {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 1fr);
+    gap: 3px;
+  }
+
+  .portfolio-imgs .img {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 /* subscribe  */
 
 #subscribe {
   margin-top: -35px;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background-color: var(--dark);
   color: var(--light);
@@ -948,6 +977,7 @@ header {
   align-items: center;
   justify-content: center;
   gap: 4rem;
+  padding: 8rem 0;
 }
 
 .subscribe-head {
@@ -957,7 +987,7 @@ header {
 }
 
 .subscribe-head h1 {
-  font-size: 55px;
+  font-size: clamp(20px, 8vw, 55px);
   font-weight: 700;
   list-style: 1.5;
   width: 70%;
@@ -965,7 +995,7 @@ header {
 }
 
 .subscribe-head p {
-  font-size: 16px;
+  font-size: clamp(6px, 3vw, 17px);
   font-weight: 400;
   font-family: var(--font-family-Manrope);
   color: var(--first-bg-color);
@@ -996,10 +1026,12 @@ header {
 }
 
 .subscribe-body p {
-  font-size: 16px;
+  font-size: clamp(6px, 3vw, 17px);
   font-weight: 400;
   font-family: var(--font-family-Manrope);
   color: var(--first-bg-color);
+  width: 350px;
+  text-align: center;
 }
 
 .subscribe-body button {
@@ -1126,6 +1158,51 @@ header {
 
 .FAQ-question-1 h2 {
   padding: 0;
+}
+
+@media (max-width: 1285px) {
+  #FAQ {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .FAQ-img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+
+  .FAQ-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--first-bg-color);
+    text-align: center;
+  }
+
+  .FAQ-question-first {
+    display: flex;
+    flex-direction: column;
+    border-bottom: none;
+    width: 400px;
+    margin: 0;
+  }
+
+  .FAQ-question {
+    width: 400px;
+  }
+
+  .FAQ-info-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 /* Contact us  */
