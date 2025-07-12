@@ -17,16 +17,26 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap"
       rel="stylesheet"
     />
+    <script>
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector("header");
+        if (window.scrollY > 100) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+    </script>
   </head>
-  <body>
+  <body class="headhead">
     <!-- header -->
     <header>
       <div class="logo"><p>Jera.</p></div>
       <div class="header-links">
-        <input type="checkbox" id="check">
+        <input type="checkbox" id="check" />
         <label for="check" class="icons">
-            <i class='bx  bx-menu fa-2xs' id="menu-icon"></i>
-            <i class='bxr  bx-x fa-2xs' id="close-icon" ></i> 
+          <i class="bx bx-menu fa-2xs" id="menu-icon"></i>
+          <i class="bxr bx-x fa-2xs" id="close-icon"></i>
         </label>
         <nav class="nav-bar">
           <li><a href="#hero">Home</a></li>
@@ -553,7 +563,7 @@
         </p>
         <button>READ MORE</button>
       </div>
-      <div class="desc2-img " id="haha">
+      <div class="desc2-img" id="haha">
         <img src="desc2-img.jpg" alt="" />
       </div>
     </section>
@@ -748,18 +758,21 @@
     <footer>
       <div class="footer-item">
         <h1>Jero.</h1>
-        <p>
+        <p id="footer-p">
           Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper
           mattis consectetur nulla non metus.
         </p>
-        <p>
-          Terms & Conditions Privacy Policy
-        </p>
+        <p>Terms & Conditions | Privacy Policy</p>
       </div>
       <div class="footer-item newsletter">
         <h2>Newsletter</h2>
-        <input type="email" name="" id="email">
-        <input type="button" id="btn" value="Subscribe" style="display: block;">
+        <input type="email" name="" id="email" />
+        <input
+          type="button"
+          id="btn"
+          value="Subscribe"
+          style="display: block"
+        />
       </div>
       <div class="footer-item">
         <h2>Links</h2>
@@ -780,12 +793,12 @@
       <div class="footer-item">
         <h2>Gallery</h2>
         <div class="img-footer">
-          <img src="j6.jpg" alt="">
-          <img src="j5.jpg" alt="">
-          <img src="j8.jpg" alt="">
-          <img src="j7.jpg" alt="">
-          <img src="j4.jpg" alt="">
-          <img src="j2.jpg" alt="">
+          <img src="j6.jpg" alt="" />
+          <img src="j5.jpg" alt="" />
+          <img src="j8.jpg" alt="" />
+          <img src="j7.jpg" alt="" />
+          <img src="j4.jpg" alt="" />
+          <img src="j2.jpg" alt="" />
         </div>
       </div>
     </footer>
